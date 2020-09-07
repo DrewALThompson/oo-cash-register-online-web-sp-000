@@ -21,7 +21,6 @@ class CashRegister
     if @discount > 0
       @discount = @discount/100.to_f
       @total = (@total - (@total * @discount)).to_i
-      @last_transaction_amount = @total
       return "After the discount, the total comes to $#{@total}."
     else
       @discount <= 0
